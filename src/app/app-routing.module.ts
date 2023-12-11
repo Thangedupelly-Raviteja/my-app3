@@ -15,6 +15,7 @@ import { CreateVehiclesComponent } from './create-vehicles/create-vehicles.compo
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { UserformComponent } from './userform/userform.component';
 import { StudentFormComponent } from './studentform/studentform.component';
+import { NotifyGuard } from './notify.guard';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
@@ -29,11 +30,11 @@ const routes: Routes = [
   {path:'cars',component:CarsComponent},
   {path:'vehicles',component:VehiclesComponent},
   {path:'accounts',component:AccountsComponent},
-  {path:'create-user',component:CreateUserComponent},
+  {path:'create-user', canActivate:[NotifyGuard],component:CreateUserComponent},
   {path:'create-vehicles',component:CreateVehiclesComponent},
   {path:'createAccount',component:CreateAccountComponent},
-  {path:'userform',component:UserformComponent},
-  {path:'studentform',component:StudentFormComponent},
+  {path:'userform',canActivate:[NotifyGuard],component:UserformComponent},
+  {path:'studentform',canActivate:[NotifyGuard],component:StudentFormComponent},
 ]}
 
 ];
