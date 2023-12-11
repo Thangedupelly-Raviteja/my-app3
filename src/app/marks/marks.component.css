@@ -1,0 +1,12 @@
+table{
+    padding: 50px;
+    font-size: large;
+    
+}
+thead{
+    background-color: black;
+    color: aliceblue;
+}
+tbody{
+    color: black;
+}

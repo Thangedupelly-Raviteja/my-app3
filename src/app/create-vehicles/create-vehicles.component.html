@@ -1,0 +1,44 @@
+<form [formGroup]="userform">
+<h1>Create Vehicle</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <td><label for="">Vehicle</label></td>
+                <td><input type="text" formControlName="Vehicle"></td>
+                
+            </tr>
+            <tr>
+                <td><label for="">manufacturer</label></td>
+                <td> <input type="text" formControlName="manufacturer"></td>
+            </tr>
+            <td>
+                <label for="">model</label></td>
+                <td><input type="text" formControlName="model"></td>
+                <tr>
+                    <td><label for="">type</label></td>
+                    <td>  <input type="text" formControlName="type"></td>
+                </tr>
+                <tr>
+                    <td><label for="">fuel</label></td>
+                    <td> <input type="text" formControlName="fuel"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="">Color</label></td>
+                        <td> <input type="text" formControlName="color"></td>
+
+                </tr>
+                <tr>
+                    <td><label for="">image</label></td>
+                    <td><input type="text" formControlName="image"></td>
+                </tr>
+                <tr>
+                    <td><button (click)="submit()">submit</button></td>
+                </tr>
+        </tbody>
+    </table>
+
+  
+
+</form>
