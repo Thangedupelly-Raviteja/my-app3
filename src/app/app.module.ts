@@ -23,6 +23,8 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { UserformComponent } from './userform/userform.component';
 import { StudentFormComponent } from './studentform/studentform.component';
 import { PricePipe } from './price.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { PricePipe } from './price.pipe';
     UserformComponent,
     StudentFormComponent,
     PricePipe,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,

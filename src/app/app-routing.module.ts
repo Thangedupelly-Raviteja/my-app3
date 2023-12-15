@@ -16,6 +16,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { UserformComponent } from './userform/userform.component';
 import { StudentFormComponent } from './studentform/studentform.component';
 import { NotifyGuard } from './notify.guard';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
@@ -30,13 +31,13 @@ const routes: Routes = [
   {path:'cars',component:CarsComponent},
   {path:'vehicles',component:VehiclesComponent},
   {path:'accounts',component:AccountsComponent},
-  {path:'create-user', canActivate:[NotifyGuard],component:CreateUserComponent},
+  {path:'create-user', canDeactivate:[NotifyGuard],component:CreateUserComponent},
   {path:'create-vehicles',component:CreateVehiclesComponent},
   {path:'createAccount',component:CreateAccountComponent},
-  {path:'userform',canActivate:[NotifyGuard],component:UserformComponent},
-  {path:'studentform',canActivate:[NotifyGuard],component:StudentFormComponent},
+  {path:'userform',canDeactivate:[NotifyGuard],component:UserformComponent},
+  {path:'studentform',canDeactivate:[NotifyGuard],component:StudentFormComponent},
+  {path:'parent',component:ParentComponent},
 ]}
-
 ];
 
 @NgModule({
