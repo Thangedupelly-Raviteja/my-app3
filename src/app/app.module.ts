@@ -25,6 +25,9 @@ import { StudentFormComponent } from './studentform/studentform.component';
 import { PricePipe } from './price.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { ChildComponent } from './child/child.component';
     PricePipe,
     ParentComponent,
     ChildComponent,
+    ItemsComponent,
+    NavComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
