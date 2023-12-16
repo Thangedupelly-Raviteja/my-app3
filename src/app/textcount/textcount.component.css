@@ -1,0 +1,12 @@
+.textarea{
+    margin: 100px;
+    
+}
+.text{
+    position: absolute;
+}
+.child{
+position: relative;
+left: 200px;
+top: 135px;
+}

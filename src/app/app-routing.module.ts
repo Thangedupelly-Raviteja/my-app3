@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes, createUrlTreeFromSnapshot } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,6 +17,11 @@ import { UserformComponent } from './userform/userform.component';
 import { StudentFormComponent } from './studentform/studentform.component';
 import { NotifyGuard } from './notify.guard';
 import { ParentComponent } from './parent/parent.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
+import { RatingComponent } from './rating/rating.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
@@ -37,6 +42,20 @@ const routes: Routes = [
   {path:'userform',canDeactivate:[NotifyGuard],component:UserformComponent},
   {path:'studentform',canDeactivate:[NotifyGuard],component:StudentFormComponent},
   {path:'parent',component:ParentComponent},
+  {path:'items', component: ItemsComponent},
+  {path:'nav', component:NavComponent},
+  {path:'cart',component:CartComponent},
+  {path:'rating',component:RatingComponent},
+  {path:'about-company',component:AboutCompanyComponent}, 
+  
+  //path to lazyLoading
+
+  {
+    path: 'payments',
+    loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)
+  }
+
+  
 ]}
 ];
 

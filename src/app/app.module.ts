@@ -28,6 +28,10 @@ import { ChildComponent } from './child/child.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { RatingComponent } from './rating/rating.component';
+import { ChildRatingComponent } from './child-rating/child-rating.component';
+import { AboutModule } from './about/about.module';
+import { TextcountComponent } from './textcount/textcount.component';
 
 @NgModule({
   declarations: [
@@ -55,13 +59,17 @@ import { CartComponent } from './cart/cart.component';
     ItemsComponent,
     NavComponent,
     CartComponent,
+    RatingComponent,
+    ChildRatingComponent,
+    TextcountComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

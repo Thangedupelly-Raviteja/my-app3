@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonService } from '../common.service';
 
 @Component({
   selector: 'app-items',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent {
+ 
+  constructor(private _commonService:CommonService) {}
+
+  add(){
+    
+    this._commonService.setvalue();;
+  }
 
 }
